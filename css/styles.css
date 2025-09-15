@@ -1,0 +1,104 @@
+
+/* ==============================
+   THEME VARIABLES
+============================== */
+:root{
+  --bg:#000000;
+  --ink:#f5f5f5;
+  --muted:#bdbdbd;
+  --accent:#ffb703;     
+  --card:#111111;
+  --border:#2a2a2a;
+}
+
+/* ==============================
+  GLOBAL
+============================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: #f5f5f5;
+  background: #000000;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Header + brand */
+.site-header {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  background: #0a0a0a;
+}
+
+.brand2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.brand2 .afro {
+  color: var(--ink);
+}
+
+.brand2 .vibes {
+  color: var(--accent);
+}
+
+/* Nav */
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: .5rem;
+  display: flex;
+  gap: .75rem;
+  justify-content: center;
+  background: #111;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--ink);
+  padding: .4rem .6rem;
+  font-weight: 600;
+  border-radius: .5rem;
+}
+
+.nav a:hover {
+  background: var(--card);
+}
+
+.nav a.active {
+  background: var(--accent);
+  color: #000;
+}
+
+/* Layout helpers */
+.container {
+  max-width: 1100px;
+  margin: 1rem auto;
+  padding: 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: #bdbdbd;
+  padding: 1rem;
+  margin-top: 2rem;
+}
