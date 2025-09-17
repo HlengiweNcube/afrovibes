@@ -168,7 +168,7 @@ aside.sidebar {
   width: 100%;
   display: block;
 }
-/* Tablet and up: show a sidebar to the right of main */
+/* Tablet and up: will show a sidebar to the right of main */
 @media (min-width: 600px) {
   /* Place areas in columns: header, nav, banner full width; main + aside side-by-side; footer full width */
   #wrapper {
@@ -189,6 +189,39 @@ aside.sidebar {
   .container {
     margin: 1rem;
   }
+}
+/* Table demo styling */
+.demo-table {
+  border: 2px solid blue;  
+  width: 80%;
+  margin: 1rem auto;
+  border-collapse: collapse; 
+}
+
+.demo-table tr {
+  border: 2px solid red; /* a) red borders on rows */
+}
+
+.demo-table th {
+  border: 2px solid red;   
+  padding: 0.5rem;
+  background: #222;
+  color: #fff;
+}
+
+.demo-table td {
+  border: 2px solid green; 
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.demo-table tfoot td {
+  background: #333;
+  color: #ffb703;  
+  font-style: italic;
+  text-align: center;
+  padding: 0.75rem;
+  border-top: 2px solid var(--border);
 }
 
 .site-footer {
