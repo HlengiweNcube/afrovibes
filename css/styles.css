@@ -223,6 +223,34 @@ aside.sidebar {
   padding: 0.75rem;
   border-top: 2px solid var(--border);
 }
+/* Float image (wrap text around it) */
+.float-img {
+  float: left;
+  width: min(240px, 45%);   /* responsive upper bound */
+  margin: 0 .75rem .5rem 0; /* space around image */
+  border-radius: 8px;
+}
+
+/* Blockquote styling for the isicathamiya section */
+.genre-block {
+  background: #101010;
+  border-left: 4px solid var(--accent);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .75rem 1rem;
+}
+
+/* Scroll card height and inner spacing */
+.scroll {
+  max-height: 420px;
+  overflow: auto;
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--card);
+}
+
+
 
 .site-footer {
   border-top: 1px solid var(--border);
