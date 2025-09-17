@@ -1,14 +1,13 @@
-
 /* ==============================
    THEME VARIABLES
 ============================== */
-:root{
-  --bg:#000000;
-  --ink:#f5f5f5;
-  --muted:#bdbdbd;
-  --accent:#ffb703;     
-  --card:#111111;
-  --border:#2a2a2a;
+:root {
+  --bg: #000000;
+  --ink: #f5f5f5;
+  --muted: #bdbdbd;
+  --accent: #ffb703;
+  --card: #111111;
+  --border: #2a2a2a;
 }
 
 /* ==============================
@@ -27,11 +26,65 @@ body {
 
 body {
   margin: 0;
-  color: #f5f5f5;
-  background: #000000;
+  color: var(--ink);
+  background: var(--bg);
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: .5rem .75rem;
+  background: var(--accent);
+  color: #000;
+  border-radius: .5rem;
+  z-index: 1000;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* ==============================
+   GRID AREAS (CASITA-LIKE + BANNER)
+============================== */
+        header { grid-area: h;}
+           nav {  grid-area: n;}
+  .site-banner {  grid-area: b;}
+          main {  grid-area: m;}
+         aside {  grid-area: a;}
+        footer {  grid-area: f;}
+
+#wrapper {
+  display: grid;
+ 
+  grid-template:
+    "h"
+    "n"
+    "b"
+    "m"
+    "f";
+  min-height: 100%;
+  grid-auto-rows: minmax(min-content, auto);
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* Hide aside on small screens */
+aside.sidebar {
+  display: none;
 }
 
 /* Header + brand */
@@ -85,7 +138,6 @@ body {
   color: #000;
 }
 
-
 .container {
   max-width: 1100px;
   margin: 1rem auto;
@@ -95,10 +147,60 @@ body {
   border-radius: 12px;
 }
 
+.aside-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1rem;
+  align-items: center;
+}
+
+.aside-card figcaption {
+  padding: .75rem 1rem;
+  color: var(--muted);
+  font-size: .95rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.aside-card img {
+  width: 100%;
+  display: block;
+}
+/* Tablet and up: show a sidebar to the right of main */
+@media (min-width: 600px) {
+  /* Place areas in columns: header, nav, banner full width; main + aside side-by-side; footer full width */
+  #wrapper {
+    grid-template:
+      "h   h   h"
+      "n   n   n"
+      "b   b   b"
+      "m   m   a"
+      "f   f   f"
+      / 1fr 1fr 320px;   /* two content columns + a 320px sidebar */
+  }
+
+  /* unhide the aside on wider screens */
+  aside.sidebar {
+    display: block;
+  }
+
+  .container {
+    margin: 1rem;
+  }
+}
+
 .site-footer {
   border-top: 1px solid var(--border);
   text-align: center;
   color: #bdbdbd;
   padding: 1rem;
   margin-top: 2rem;
+}
+
+.site-footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
 }
