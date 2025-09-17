@@ -251,6 +251,44 @@ aside.sidebar {
 }
 
 
+/* ==============================
+   LAYOUT HELPERS
+============================== */
+.container{ max-width:1100px; margin-inline:1px;  }
+
+.hero-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:1px;
+  padding:.25rem;
+  margin-top: 0;
+}
+.hero-card h1{ margin-top:0; color:var(--accent); }
+
+.grid{
+  display:grid; gap:1rem; margin-top:2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid article{
+  background:var(--card); border:1px solid var(--border);
+  border-radius:12px; padding:1rem;
+}
+
+/* Images aside */
+.responsive-img{ max-width:100%; height:auto; display:block; }
+
+/* Sidebar*/
+.aside-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1rem;
+  align-items: center;
+}
+.aside-card figcaption { padding:.75rem 1rem; color:var(--muted); 
+  font-size:.95rem; font-weight:bold; text-align: center;}
+
 .site-footer {
   border-top: 1px solid var(--border);
   text-align: center;
