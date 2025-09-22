@@ -387,7 +387,6 @@ aside.sidebar {
 
 /*classes for links (interactive states) */
 a:link    { color: var(--ink); }          /* new/unvisited */
-a:visited { color: #c0c0c0; }              /* visited */
 a:hover   { color: var(--accent); }        /* hover */
 a:focus   { outline: 2px solid var(--accent); outline-offset: 2px; }
 a:active  { transform: translateY(1px); }  /* when clicked */
@@ -428,6 +427,18 @@ a:visited {
   border-left: 3px solid var(--accent);
   padding-left: 0.75rem;
 }
+
+/* Jump link styling */
+a.jump {
+  color: blue;          /* making the link text blue */
+  font-weight: bold;    
+  text-decoration: none;
+}
+
+a.jump:hover {
+  text-decoration: underline; /* underline on hover */
+}
+
 
 
 
