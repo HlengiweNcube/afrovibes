@@ -280,7 +280,7 @@ aside.sidebar {
 }
 
 /* Blockquote styling for the isicathamiya section */
-.genre-block {
+.block-styling {
   background: #101010;
   border-left: 4px solid var(--accent);
   border: 1px solid var(--border);
@@ -307,10 +307,10 @@ aside.sidebar {
   background:var(--card);
   border:1px solid var(--border);
   border-radius:1px;
-  padding:.25rem;
+  padding:1.25rem;
   margin-top: 0;
 }
-.hero-card h1{ margin-top:0; color:var(--accent); }
+.hero-card h1{ margin-top:0; color:var(--accent); font-size:2rem; font-weight:700; }
 
 .grid{
   display:grid; gap:1rem; margin-top:2rem;
