@@ -279,6 +279,13 @@ aside.sidebar {
   border-radius: 8px;
 }
 
+.header-center {
+  text-align: center;
+  margin-top: 0;
+  color: var(--accent);
+  font-size: 2rem;
+  font-weight: 700;
+}
 /* Blockquote styling for the isicathamiya section */
 .block-styling {
   background: #101010;
@@ -286,7 +293,8 @@ aside.sidebar {
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: .75rem 1rem;
-}
+  margin:auto ;
+ }
 
 /* Scroll card height and inner spacing */
 .scroll {
