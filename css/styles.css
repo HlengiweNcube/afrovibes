@@ -128,6 +128,7 @@ aside.sidebar {
   display: flex;
   gap: .75rem;
   justify-content: center;
+  flex-wrap: wrap;   /* allow wrapping */
   background: #111;
   border-bottom: 1px solid var(--border);
 }
@@ -479,6 +480,18 @@ a.jump:hover {
   border-radius: 8px;
 }
 
+/* Small screens: stack nav items */
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav li {
+    margin: .25rem 0;
+  }
+}  
 
 
 
+  
