@@ -62,9 +62,10 @@ body {
 }
 
 .site-banner_img {
-    display: block;
+    display: grid;
     width: 100%;
-    height: 250px;
+    height: auto;
+    max-height: 300px;
     object-fit: cover;
     margin-bottom: 1rem;
 }
@@ -178,7 +179,7 @@ aside.sidebar {
 
 .aside-card img {
   width: 100%;
-  display: block;
+  display: grid;
 }
 /* Tablet and up: will show a sidebar to the right of main */
 @media (min-width: 600px) {
@@ -195,7 +196,7 @@ aside.sidebar {
 
   /* unhide the aside on wider screens */
   aside.sidebar {
-    display: block;
+    display: grid;
   }
 
   .container {
@@ -206,42 +207,121 @@ aside.sidebar {
 /* ==============================
    RESPONSIVE BREAKPOINTS
 ============================== */
-@media (max-width:900px){
-  .grid{ grid-template-columns: 1fr 1fr; }
-}
-@media (max-width:600px){
-  .grid{ grid-template-columns: 1fr; }
-  .container{ padding:1rem; }
-  .nav{ gap:.5rem; flex-wrap:wrap; }
+
+/* Default nav (mobile-first) */
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: .5rem;
+  display: flex;
+  gap: .75rem;
+  justify-content: center;
+  flex-wrap: wrap;      /* wraps on small screens */
+  background: #111;
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;     /* if items don't fit, allow scroll */
 }
 
-/* ≥600px: nav on top, banner full width, main + aside */
-@media (min-width:600px){
-  #wrapper{
+/* NAVIGATION (mobile-first, always horizontal row) */
+nav {
+  grid-area: n;         /* always takes its own row */
+  width: 100%;
+}
+/* ==============================
+   RESPONSIVE BREAKPOINTS
+============================== */
+/* ==============================
+   RESPONSIVE BREAKPOINTS (CLEANED UP)
+============================== */
+
+/* Tablets and small desktops (≤900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+  /* Grid: 2 columns instead of 3 */
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 599px) {
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width:599px){
+  #wrapper {
+  display: grid;
     grid-template:
-      " h   h "
-      " n   n "
-      " b   b "
-      " m   a "
-      " f   f "
+      "h"
+      "n"
+      "b"
+      "m"
+      "f"
+      / 100%;
+  }
+
+  /* Make nav always visible, horizontal, centered */
+  .nav {
+    display: grid;
+    flex-wrap: wrap;       /* allow wrapping */
+  }
+
+  .nav li {
+    flex: 1 1 auto;        /* let items shrink & grow */
+    text-align: center;    /* center text inside each link */
+  }
+}
+
+@media (max-width: 599px) {
+  .nav {
+    justify-content: flex-start;  /* push links to the left */
+  }
+
+  .nav li {
+    flex: 0 1 auto;               /* don’t force equal widths */
+    text-align: left;
+  }
+}
+
+/* Medium+ screens (≥600px but <1020px) */
+@media (min-width: 600px) and (max-width: 1019px) {
+  #wrapper {
+    grid-template:
+      "h   h"
+      "n   n"
+      "b   b"
+      "m   a"
+      "f   f"
       / 60% 40%;
   }
-  aside.sidebar{ display:block; padding:1rem; }
+
+  aside.sidebar {
+    display: grid;
+    padding: 1rem;
+  }
+
+  .container {
+    margin: 1rem;
+  }
 }
 
-/* ≥1020px: nav on its own row; banner full width; main + aside below */
-@media (min-width:1020px){
-  #wrapper{
+/* Large desktops (≥1020px) */
+@media (min-width: 1020px) {
+  #wrapper {
     grid-template:
-      " h   h   h "
-      " n   n   n "
-      " b   b   b "
-      " m   m   a "
-      " f   f   f "
+      "h   h   h"
+      "n   n   n"
+      "b   b   b"
+      "m   m   a"
+      "f   f   f"
       / 1fr 1fr 28%;
   }
-  .nav{ flex-wrap:nowrap; }
+
+  .nav {
+    flex-wrap: nowrap; /* keep nav in one line */
+  }
 }
+
 
 /* Table demo styling */
 .table {
@@ -350,7 +430,7 @@ aside.sidebar {
 }
 
 /* Images aside */
-.responsive-img{ max-width:100%; height:auto; display:block; }
+.responsive-img{ max-width:100%; height:auto; display:grid; }
 
 /* Sidebar*/
 .aside-card {
@@ -479,19 +559,3 @@ a.jump:hover {
   aspect-ratio: 16 / 9; /* auto height based on width */
   border-radius: 8px;
 }
-
-/* Small screens: stack nav items */
-@media (max-width: 600px) {
-  .nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav li {
-    margin: .25rem 0;
-  }
-}  
-
-
-
-  
