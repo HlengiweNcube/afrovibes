@@ -331,7 +331,7 @@ aside.sidebar {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   max-width: 1100px;      /* same as container */
   justify-items: center;  /* center items in their columns */
-  align-items: start; /* makes items align at the top */
+  
 
 }
 
@@ -342,7 +342,6 @@ aside.sidebar {
   padding: 1rem;
   width: 100%;            /* makes articles stretch */
   max-width: 320px;       /* keeps them readable */
-  position: absolute;
   top: 0; left: 0;
   width: 100%;
   height: 100%;
