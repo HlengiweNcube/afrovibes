@@ -442,6 +442,27 @@ a.jump {
 a.jump:hover {
   text-decoration: underline; /* underline on hover */
 }
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*to keep the iframe inside the grid*/
+.grid iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* auto height based on width */
+  border-radius: 8px;
+}
 
 
 
