@@ -1,22 +1,64 @@
-# Afrovibes
-AfroVibes is a responsive website that introduces Southern African music (Amapiano, Kwaito, Mbira, Isicathamiya, and more) to European audiences. 
-## 🌍Website Goal
-The website goal is to show the richness of Southern African music culture, genres, artists, and history.
-## Pages 
-i.   index.html - Home page (intro + highlights) 
-ii.  genres.html - Genres overview + comparison table 
-iii. artists.html - Artists & ensembles + scrollable section 
-iv.  history.html  Timeline of music + embedded YouTube
-## features 
-i. Responsive pages 
-ii. Consistent header, navigation and footer
-iii. table with genre snashots
-iv. Scrollable artists section
-v.  Accessible skip link 
-vi. External links and email hyperlink
+## AfroVibes 
 
-Tech Used 
-i. HTML5
-ii. CSS
-iii Responsive design with @media
-iv Accessibility best practices
+AfroVibes is a responsive website that introduces Southern African music (Amapiano, Kwaito, Mbira, Isicathamiya, Sungura and more) to European audiences. 
+
+ 
+
+## Website Goal 
+
+To showcase the richness of Southern African music culture — genres, artists, and history — and make it accessible to new audiences in a modern, responsive, and user-friendly way. 
+
+ 
+
+## Pages 
+
+- [Home](index.html) Introduction, highlights, FAQ, external links, email link
+- [Genres](genres.html)  overview + comparison table + meter (genre popularity) 
+- [Artists](artists.html) Artists & ensembles + scrollable section + embedded youtube
+- [History](history.html) Timeline of music + styled blockquote + sidebar image 
+
+ 
+## Features 
+
+Responsive design with @media queries 
+Consistent header, navigation, and footer across all pages 
+Table summarizing genre snapshots (<table>) 
+Scrollable artist card (overflow: auto) 
+Accessible skip link for screen readers 
+External links + one email hyperlink (mail to:) 
+FAQ section using <dl>, <dt>, <dd> 
+Embedded YouTube video (bonus feature) 
+Favicon (favicon.png) for browser tab 
+ 
+
+## Tech Used 
+
+HTML5 
+CSS3 (external stylesheet only – no inline/embedded CSS) 
+Responsive Design with @media queries 
+Accessibility best practices 
+ 
+
+## Documentation 
+- [Planning & Analysis Sheet](docs/Planning%20Analysis%20Sheet.pdf)
+- [Site Map](docs/sitemap.pdf)
+- [Wireframes](docs/Wireframe.png)
+
+ 
+## Assignment Requirements Checklist 
+
+Appropriate meta tags  
+One page using tables (genres.html)  
+One email hyperlink  
+One external hyperlink  
+Consistent banner/logo area  
+Consistent navigation  
+External stylesheet  
+Bonus feature: Embedded YouTube video  
+Works in Chrome, Edge, Firefox 
+
+ 
+
+© 2025 AfroVibes 
+
+ 
